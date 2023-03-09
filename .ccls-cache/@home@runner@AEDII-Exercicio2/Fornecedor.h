@@ -1,12 +1,10 @@
 #ifndef ARQUIVO_H
 #define ARQUIVO_H
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct Fornecedor
-{
+typedef struct fornecedor {
     char cnpj[15];
     char razaoSocial[30];
     char nomeFantasia[30];
