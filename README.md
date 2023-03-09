@@ -1,4 +1,4 @@
-# AEDII-Exercicio2
+# AEDII - Exercício 2
 Implementem um sistema para o gerenciamento de fornecedores, obedecendo a todas as instruções desse enunciado:
 
 1. Formem grupos de até cinco pessoas. 
