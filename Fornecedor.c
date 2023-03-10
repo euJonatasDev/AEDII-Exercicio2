@@ -4,7 +4,7 @@ Fornecedor * criaFornecedorVazio() {
     return malloc(sizeof(Fornecedor));
 }
 
-Fornecedor * criaFornecedorPreenchido(char cnpj[15], char razaoSocial[30], char nomeFantasia[30], char endereco[200]) {
+Fornecedor * criaFornecedor(char cnpj[], char razaoSocial[], char nomeFantasia[], char endereco[]) {
 
     Fornecedor * fornecedor = criaFornecedorVazio();
     setCnpj(fornecedor, cnpj);

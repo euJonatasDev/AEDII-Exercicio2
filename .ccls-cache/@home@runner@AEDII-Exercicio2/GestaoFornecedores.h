@@ -11,10 +11,8 @@ typedef struct gestaoFornecedores {
     unsigned int numMaxFornec;
 } GestaoFornecedores;
 
-GestaoFornecedores * criaGestaoFornecedores();
-GestaoFornecedores * iniciaGestaoFornecedores();
-GestaoFornecedores * consultaNumFornec();
-
-
+GestaoFornecedores * criaGestaoFornecedores(int numMaxFornec);
+GestaoFornecedores * iniciaGestaoFornecedores(unsigned int numFornecedores, unsigned int numMaxFornec);
+unsigned int consultaNumFornec(GestaoFornecedores * gestaoFornecedores);
 
 #endif
