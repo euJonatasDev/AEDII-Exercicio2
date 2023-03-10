@@ -11,15 +11,15 @@ typedef struct fornecedor {
     char endereco[200];
 } Fornecedor;
 
-Fornecedor * criaFornecedorVazio();
-Fornecedor * criaFornecedor(char cnpj[], char razaoSocial[], char nomeFantasia[], char endereco[]);
-char * getCnpj(Fornecedor * fornecedor);
-void setCnpj(Fornecedor * fornecedor, char cnpjFornecedor[15]);
-char * getRazaoSocial(Fornecedor * fornecedor);
-void setRazaoSocial(Fornecedor * fornecedor, char razaoSocialFornecedor[30]);
-char * getNomeFantasia(Fornecedor * fornecedor);
-void setNomeFantasia(Fornecedor * fornecedor, char nomeFanstasiaFornecedor[30]);
-char * getEndereco(Fornecedor * fornecedor);
-void setEndereco(Fornecedor * fornecedor, char enderecoFornecedor[200]);
+Fornecedor *criaFornecedorVazio();
+Fornecedor *criaFornecedor(char cnpj[], char razaoSocial[], char nomeFantasia[], char endereco[]);
+char *getCnpj(Fornecedor *fornecedor);
+void setCnpj(Fornecedor *fornecedor, char cnpjFornecedor[15]);
+char *getRazaoSocial(Fornecedor *fornecedor);
+void setRazaoSocial(Fornecedor *fornecedor, char razaoSocialFornecedor[30]);
+char *getNomeFantasia(Fornecedor *fornecedor);
+void setNomeFantasia(Fornecedor *fornecedor, char nomeFanstasiaFornecedor[30]);
+char *getEndereco(Fornecedor *fornecedor);
+void setEndereco(Fornecedor *fornecedor, char enderecoFornecedor[200]);
 
 #endif

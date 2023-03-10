@@ -1,12 +1,12 @@
 #include "Fornecedor.h"
 
-Fornecedor * criaFornecedorVazio() {
+Fornecedor *criaFornecedorVazio() {
     return malloc(sizeof(Fornecedor));
 }
 
-Fornecedor * criaFornecedor(char cnpj[], char razaoSocial[], char nomeFantasia[], char endereco[]) {
+Fornecedor *criaFornecedor(char cnpj[], char razaoSocial[], char nomeFantasia[], char endereco[]) {
 
-    Fornecedor * fornecedor = criaFornecedorVazio();
+    Fornecedor *fornecedor = criaFornecedorVazio();
     setCnpj(fornecedor, cnpj);
     setRazaoSocial(fornecedor, razaoSocial);
     setNomeFantasia(fornecedor, nomeFantasia);
@@ -15,34 +15,34 @@ Fornecedor * criaFornecedor(char cnpj[], char razaoSocial[], char nomeFantasia[]
     return fornecedor;
 }
 
-char * getCnpj(Fornecedor * fornecedor) {
+char *getCnpj(Fornecedor *fornecedor) {
     return fornecedor->cnpj;
 }
 
-void setCnpj(Fornecedor * fornecedor, char cnpjFornecedor[15]) {
+void setCnpj(Fornecedor *fornecedor, char cnpjFornecedor[15]) {
     strcpy(fornecedor->cnpj, cnpjFornecedor);
 }
 
-char * getRazaoSocial(Fornecedor * fornecedor) {
+char *getRazaoSocial(Fornecedor * fornecedor) {
     return fornecedor->razaoSocial;
 }
 
-void setRazaoSocial(Fornecedor * fornecedor, char razaoSocialFornecedor[30]) {
+void setRazaoSocial(Fornecedor *fornecedor, char razaoSocialFornecedor[30]) {
     strcpy(fornecedor->cnpj, razaoSocialFornecedor);
 }
 
-char * getNomeFantasia(Fornecedor * fornecedor) {
+char *getNomeFantasia(Fornecedor * fornecedor) {
     return fornecedor->nomeFantasia;
 }
 
-void setNomeFantasia(Fornecedor * fornecedor, char nomeFanstasiaFornecedor[30]) {
+void setNomeFantasia(Fornecedor *fornecedor, char nomeFanstasiaFornecedor[30]) {
     strcpy(fornecedor->nomeFantasia, nomeFanstasiaFornecedor);
 }
 
-char * getEndereco(Fornecedor * fornecedor) {
+char *getEndereco(Fornecedor *fornecedor) {
     return fornecedor->endereco;
 }
 
-void setEndereco(Fornecedor * fornecedor, char enderecoFornecedor[200]) {
+void setEndereco(Fornecedor *fornecedor, char enderecoFornecedor[200]) {
     strcpy(fornecedor->cnpj, enderecoFornecedor);
 }

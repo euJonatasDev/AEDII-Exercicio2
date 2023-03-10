@@ -6,13 +6,15 @@
 #include "Fornecedor.h"
 
 typedef struct gestaoFornecedores {
-    Fornecedor * fornecedor;
+    Fornecedor *fornecedor;
     unsigned int numFornecedores;
     unsigned int numMaxFornec;
 } GestaoFornecedores;
 
-GestaoFornecedores * criaGestaoFornecedores(int numMaxFornec);
-GestaoFornecedores * iniciaGestaoFornecedores(unsigned int numFornecedores, unsigned int numMaxFornec);
-unsigned int consultaNumFornec(GestaoFornecedores * gestaoFornecedores);
+GestaoFornecedores *criaGestaoFornecedores(int numMaxFornec);
+GestaoFornecedores *iniciaGestaoFornecedores(GestaoFornecedores *gestaoFornecedores, unsigned int numFornec);
+unsigned int consultaNumFornec(GestaoFornecedores *gestaoFornecedores);
+Fornecedor *ordenaFornecedores();
+
 
 #endif
