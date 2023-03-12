@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include "Fornecedor.h"
 #include "GestaoFornecedores.h"
+#include "ArquivoFornecedores.h"
+#include "InterfaceFornecedores.h"
 
 int main(void) {
-  Fornecedor fornecedor;
-  char cnpj[15] = "12837772";
-  setCnpj(&fornecedor, cnpj);
-  printf("%s\n", getCnpj(&fornecedor));
+  Fornecedor *fornecedor = criarFornecedorVazio();
+
+  preencherDadosFornecedor(fornecedor);
+  exibirDadosFornecedor(fornecedor);
+  
   
   return 0;
 }
