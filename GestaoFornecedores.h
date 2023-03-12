@@ -14,7 +14,11 @@ typedef struct gestaoFornecedores {
 GestaoFornecedores *criaGestaoFornecedores(int numMaxFornec);
 GestaoFornecedores *iniciaGestaoFornecedores(GestaoFornecedores *gestaoFornecedores, unsigned int numFornec);
 unsigned int consultaNumFornec(GestaoFornecedores *gestaoFornecedores);
-Fornecedor *ordenaFornecedores();
-
+void ordenarFornecedores();
+void inserirFornecedor();
+Fornecedor *retornarFornecedor();
+int removerFornecedor();
+int buscarFornecedorCnpj();
+int buscarFornecedorRazao();
 
 #endif
