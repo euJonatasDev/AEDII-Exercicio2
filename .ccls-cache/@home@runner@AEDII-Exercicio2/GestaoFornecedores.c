@@ -7,9 +7,9 @@ GestaoFornecedores *criarGestaoFornecedores(int numMaxFornec) {
 
 //Função para inicializar os campos.
 void iniciarGestaoFornecedores(GestaoFornecedores *gestaoFornecedores, int numFornecedores) {
-  Fornecedor *f = NULL;
+  Fornecedor f;
   for(int i = 0; i < numFornecedores; i++) {
-    gestaoFornecedores->fornecedor[i] = *f;
+    gestaoFornecedores->fornecedor[i] = f;
   }
   gestaoFornecedores->numFornecedores = 0;
   gestaoFornecedores->numMaxFornec = 0;
