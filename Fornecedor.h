@@ -11,8 +11,8 @@ typedef struct fornecedor {
     char endereco[200];
 } Fornecedor;
 
-Fornecedor *criaFornecedorVazio();
-Fornecedor *criaFornecedor(char cnpj[], char razaoSocial[], char nomeFantasia[], char endereco[]);
+Fornecedor *criarFornecedorVazio();
+Fornecedor *criarFornecedor(char cnpj[], char razaoSocial[], char nomeFantasia[], char endereco[]);
 char *getCnpj(Fornecedor *fornecedor);
 void setCnpj(Fornecedor *fornecedor, char cnpjFornecedor[15]);
 char *getRazaoSocial(Fornecedor *fornecedor);

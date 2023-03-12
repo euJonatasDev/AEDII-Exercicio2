@@ -1,12 +1,12 @@
 #include "Fornecedor.h"
 
-Fornecedor *criaFornecedorVazio() {
+Fornecedor *criarFornecedorVazio() {
     return malloc(sizeof(Fornecedor));
 }
 
-Fornecedor *criaFornecedor(char cnpj[], char razaoSocial[], char nomeFantasia[], char endereco[]) {
+Fornecedor *criarFornecedor(char cnpj[], char razaoSocial[], char nomeFantasia[], char endereco[]) {
 
-    Fornecedor *fornecedor = criaFornecedorVazio();
+    Fornecedor *fornecedor = criarFornecedorVazio();
     setCnpj(fornecedor, cnpj);
     setRazaoSocial(fornecedor, razaoSocial);
     setNomeFantasia(fornecedor, nomeFantasia);

@@ -1,10 +1,10 @@
 #include "GestaoFornecedores.h"
 
-GestaoFornecedores *criaGestaoFornecedores(int numMaxFornec) {
+GestaoFornecedores *criarGestaoFornecedores(int numMaxFornec) {
   return malloc(numMaxFornec * sizeof(GestaoFornecedores));
 }
 
-GestaoFornecedores *iniciaGestaoFornecedores(GestaoFornecedores * gestaoFornecedores, unsigned int numFornec) {
+GestaoFornecedores *iniciarGestaoFornecedores(GestaoFornecedores * gestaoFornecedores, unsigned int numFornec) {
   gestaoFornecedores->fornecedor = malloc(numFornec * sizeof(Fornecedor));
 
   return gestaoFornecedores;
