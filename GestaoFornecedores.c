@@ -3,19 +3,19 @@
 //Função para alocação dinâmica de uma variável do tipo GestaoFornecedores.
 GestaoFornecedores *criarGestaoFornecedores(int numMaxFornec) {
   GestaoFornecedores *gestaoFornecedores = malloc(sizeof(GestaoFornecedores));
-  gestaoFornecedores->fornecedor = malloc(numMaxFornec * sizeof(Fornecedor));
-  gestaoFornecedores->numMaxFornec = numMaxFornec;
-  
+  if(gestaoFornecedores == NULL) {
+    return NULL;
+  } else {
+    gestaoFornecedores->fornecedor = malloc(numMaxFornec * sizeof(Fornecedor));
+    gestaoFornecedores->numMaxFornec = numMaxFornec;
+  }
   return gestaoFornecedores;
 }
 
 //Função para inicializar os campos.
-void iniciarGestaoFornecedores(GestaoFornecedores *gestaoFornecedores, int numFornecedores) {
-  Fornecedor fornecedor;
-  for(int i = 0; i < numFornecedores; i++) {
-    gestaoFornecedores->fornecedor[i] = fornecedor; 
-  }
-  gestaoFornecedores->numFornecedores = numFornecedores;
+void iniciarGestaoFornecedores(GestaoFornecedores *gestaoFornecedores, Fornecedor *fornecefor) {
+  gestaoFornecedores->fornecedor = fornecefor;
+  gestaoFornecedores->numFornecedores = 0;
   gestaoFornecedores->numMaxFornec = gestaoFornecedores->numMaxFornec;
 }
 
