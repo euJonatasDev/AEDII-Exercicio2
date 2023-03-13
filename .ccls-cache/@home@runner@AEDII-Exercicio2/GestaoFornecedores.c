@@ -2,14 +2,17 @@
 
 //Função para alocação dinâmica de uma variável do tipo GestaoFornecedores.
 GestaoFornecedores *criarGestaoFornecedores(int numMaxFornec) {
-  return malloc(numMaxFornec * sizeof(GestaoFornecedores));
+  GestaoFornecedores *gestaoFornecedores = malloc(sizeof(GestaoFornecedores));
+  gestaoFornecedores->fornecedor = malloc(numMaxFornec * sizeof(Fornecedor));
+  
+  return gestaoFornecedores;
 }
 
 //Função para inicializar os campos.
 void iniciarGestaoFornecedores(GestaoFornecedores *gestaoFornecedores, int numFornecedores) {
-  Fornecedor f;
+  Fornecedor fornecedor;
   for(int i = 0; i < numFornecedores; i++) {
-    gestaoFornecedores->fornecedor[i] = f;
+    gestaoFornecedores->fornecedor[i] = fornecedor; 
   }
   gestaoFornecedores->numFornecedores = 0;
   gestaoFornecedores->numMaxFornec = 0;
@@ -22,5 +25,10 @@ int consultarNumFornec(GestaoFornecedores *gestaoFornecedores) {
 
 //Função para ordenar fornecedores pelo CNPJ com Shellsort.
 void ordenarFornecedores(GestaoFornecedores *gestaoFornecedores) {
+  
+}
+
+//Função para inserir um fornecedor.
+void inserirFornecedor(GestaoFornecedores *gestaoFornecedores, Fornecedor *fornecedor) {
   
 }
