@@ -4,6 +4,7 @@
 GestaoFornecedores *criarGestaoFornecedores(int numMaxFornec) {
   GestaoFornecedores *gestaoFornecedores = malloc(sizeof(GestaoFornecedores));
   gestaoFornecedores->fornecedor = malloc(numMaxFornec * sizeof(Fornecedor));
+  gestaoFornecedores->numMaxFornec = numMaxFornec;
   
   return gestaoFornecedores;
 }
@@ -14,8 +15,8 @@ void iniciarGestaoFornecedores(GestaoFornecedores *gestaoFornecedores, int numFo
   for(int i = 0; i < numFornecedores; i++) {
     gestaoFornecedores->fornecedor[i] = fornecedor; 
   }
-  gestaoFornecedores->numFornecedores = 0;
-  gestaoFornecedores->numMaxFornec = 0;
+  gestaoFornecedores->numFornecedores = numFornecedores;
+  gestaoFornecedores->numMaxFornec = gestaoFornecedores->numMaxFornec;
 }
 
 //Função para consultar o número de fornecedores.
