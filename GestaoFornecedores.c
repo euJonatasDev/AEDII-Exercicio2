@@ -24,7 +24,9 @@ int consultarNumFornec(GestaoFornecedores *gestaoFornecedores) {
   return gestaoFornecedores->numFornecedores;
 }
 
-//Função para ordenar fornecedores pelo CNPJ com Shellsort.
+//Função para comparar 
+int comparaCnpj(Fornecedor *a, Fornecedor *b);
+//Função para ordenar fornecedores pelo CNPJ com Quick Sort.
 void ordenarFornecedores(GestaoFornecedores *gestaoFornecedores) {
   
 }
@@ -32,4 +34,20 @@ void ordenarFornecedores(GestaoFornecedores *gestaoFornecedores) {
 //Função para inserir um fornecedor.
 void inserirFornecedor(GestaoFornecedores *gestaoFornecedores, Fornecedor *fornecedor) {
   
+}
+
+Fornecedor *retornarFornecedor(Fornecedor *fornecedor, int numFornec, int indice) {
+  for(int i = 0; i < numFornec; i++) {
+    if(indice == i) {
+      return &fornecedor[i];
+    }
+    return NULL;
+}
+
+void removerFornecedor(Fornecedor *fornecedor, int numFornec, int indice) {
+  for(int i = 0; i < numFornec; i++) {
+    if(indice == i) {
+      free(fornecedor[i]);
+    }
+  }
 }
